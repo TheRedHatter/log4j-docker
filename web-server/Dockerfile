@@ -7,5 +7,5 @@ WORKDIR /app/log4j-vunerable-server/
 RUN mvn clean install 
 
 #FROM tomcat:8.5.43-jdk8
-FROM tomcat:8.0.53-jre8
+FROM tomcat:8.5.85-jre8
 COPY --from=maven_builder /app/log4j-vunerable-server/target/Test.war /usr/local/tomcat/webapps
